@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const HEROES = [
+  {id: "jyn_odan", name: "Jyn Odan", health: {current: 10, max: 10}, defense: ["white"]},
+  {id: "verena_talos", name: "Verena Talos", health: {current: 10, max: 12}, defense: ["white"]},
+  {id: "galen_erso", name: "Galen Erso", health: {current: 10, max: 10}, defense: ["black"]}
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App heroes={HEROES}/>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

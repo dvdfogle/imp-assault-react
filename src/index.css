@@ -1,13 +1,168 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Aurebesh";
+  src: local("AurebeshEnglish"), url("./fonts/Aurebesh-English.ttf") format('truetype');
+  font-weight: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #171929;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+header.toolbar {
+  color: yellow;
+  border-bottom: 2px solid #254452;
+  margin: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+header.toolbar h1 {
+  margin: 4px;
+  flex: 1;
+}
+#hamburger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+#hamburger span {
+  margin-right: 6px;
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: yellow;
+  border-radius: 3px;
+}
+#terminal {
+  flex: 1;
+  display: grid;
+  grid-auto-columns: 500px;
+  grid-auto-rows: 500px;
+  margin: 16px 32px;
+  height: inherit;
+  gap: 3px;
+}
+.monitor {
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #6b6b6b;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+.screen {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
+  border-radius: 24px;
+  overflow-x: hidden;
+  background: #3e4d67;
+  background: radial-gradient(circle, rgba(60, 60, 80, 0.7), #121219 75%);
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.8), 0 0 16px rgba(200, 230, 255, 0.7);
+}
+.screen header {
+  margin: auto;
+}
+.screen header h1 {
+  margin: 12px 0px 0px 0px;
+  color: Yellow;
+}
+.screen header [role="doc-subtitle"] {
+  background-color: Yellow;
+  font-family: "Aurebesh";
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-size: 18pt;
+}
+.screen header h1:before, .screen header h1:after {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 200px;
+  background-color: Yellow;
+  position: relative;
+  vertical-align: middle;
+}
+.screen header h1:before {
+  right: 0.25em;
+  margin-left: -200px;
+}
+.screen header h1:after {
+  left: 0.25em;
+  margin-right: -200px;
+}
+.screen button {
+  margin: 16px auto;
+}
+.screen .filler {
+  color: Yellow;
+  flex: 1;
+  display: table;
+}
+.screen .filler > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.imperial {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: -webkit-fill-available;
+  border-radius: 24px;
+  overflow-x: hidden;
+  background: #3e4d67;
+  background: radial-gradient(circle, rgba(60, 60, 80, 0.7), #121219 75%);
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.8), 0 0 16px rgba(200, 230, 255, 0.7);
+}
+.imperial header {
+  margin: auto;
+}
+.imperial header h1 {
+  margin: 12px 0px 0px 0px;
+  color: DarkRed;
+}
+.imperial header [role="doc-subtitle"] {
+  background-color: DarkRed;
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-size: 18pt;
+}
+.imperial header h1:before, .imperial header h1:after {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 200px;
+  background-color: DarkRed;
+  position: relative;
+  vertical-align: middle;
+}
+.imperial header h1:before {
+  right: 0.25em;
+  margin-left: -200px;
+}
+.imperial header h1:after {
+  left: 0.25em;
+  margin-right: -200px;
+}
+.imperial button {
+  margin: 16px auto;
+}
+.imperial .filler {
+  color: DarkRed;
+  flex: 1;
+  display: table;
+}
+.imperial .filler > * {
+  display: table-cell;
+  vertical-align: middle;
 }

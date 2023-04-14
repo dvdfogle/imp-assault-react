@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Monitor, {Header} from "./components/Monitor";
+import CharDetails from "./components/CharDetails";
 
-function App() {
+function App(props) {
+  const current_mission = "Aftermath";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id="terminal">
+      <Monitor team="rebel" style={{gridColumn:"1/2", gridRow:"1/2"}}>
+        <Header title="Active Assignment" subtitle={current_mission} />
+      </Monitor>
     </div>
   );
 }
 
+
 export default App;
+//{props.game.missions.splice(-1).name}

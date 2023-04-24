@@ -3,6 +3,7 @@
   src: local("AurebeshEnglish"), url("./fonts/Aurebesh-English.ttf") format('truetype');
   font-weight: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
 body {
   background: #171929;
@@ -46,8 +47,8 @@ header.toolbar h1 {
 #terminal {
   flex: 1;
   display: grid;
-  grid-auto-columns: 500px;
-  grid-auto-rows: 500px;
+  grid-auto-columns: 400px;
+  grid-auto-rows: 400px;
   margin: 16px 32px;
   height: inherit;
   gap: 3px;
@@ -73,7 +74,9 @@ header.toolbar h1 {
   margin: auto;
 }
 .screen header h1 {
+  font-family: 'Unica One', cursive;
   margin: 12px 0px 0px 0px;
+  text-align: center;
   color: Yellow;
 }
 .screen header [role="doc-subtitle"] {
@@ -88,81 +91,55 @@ header.toolbar h1 {
   display: inline-block;
   content: "";
   height: 2px;
-  width: 200px;
+  width: 400px;
   background-color: Yellow;
   position: relative;
   vertical-align: middle;
 }
 .screen header h1:before {
   right: 0.25em;
-  margin-left: -200px;
+  margin-left: -400px;
 }
 .screen header h1:after {
   left: 0.25em;
-  margin-right: -200px;
+  margin-right: -400px;
 }
 .screen button {
   margin: 16px auto;
 }
 .screen .filler {
+  padding: 16px;
   color: Yellow;
   flex: 1;
-  display: table;
-}
-.screen .filler > * {
-  display: table-cell;
-  vertical-align: middle;
-}
-.imperial {
   display: flex;
   flex-flow: column nowrap;
-  min-height: -webkit-fill-available;
-  border-radius: 24px;
-  overflow-x: hidden;
-  background: #3e4d67;
-  background: radial-gradient(circle, rgba(60, 60, 80, 0.7), #121219 75%);
-  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.8), 0 0 16px rgba(200, 230, 255, 0.7);
+  align-items: center;
+  justify-content: space-around;
 }
-.imperial header {
-  margin: auto;
-}
+
 .imperial header h1 {
-  margin: 12px 0px 0px 0px;
   color: DarkRed;
 }
 .imperial header [role="doc-subtitle"] {
   background-color: DarkRed;
-  color: black;
-  text-align: center;
-  margin: 0;
-  font-size: 18pt;
+  color: white;
 }
 .imperial header h1:before, .imperial header h1:after {
-  display: inline-block;
-  content: "";
-  height: 2px;
-  width: 200px;
   background-color: DarkRed;
-  position: relative;
-  vertical-align: middle;
-}
-.imperial header h1:before {
-  right: 0.25em;
-  margin-left: -200px;
-}
-.imperial header h1:after {
-  left: 0.25em;
-  margin-right: -200px;
-}
-.imperial button {
-  margin: 16px auto;
 }
 .imperial .filler {
   color: DarkRed;
-  flex: 1;
-  display: table;
 }
-.imperial .filler > * {
-  display: table-cell;
-  vertical-align: middle;
+
+.jedi header h1 {
+  color: SkyBlue;
+}
+.jedi header [role="doc-subtitle"] {
+  background-color: SkyBlue;
+}
+.jedi header h1:before, .jedi header h1:after {
+  background-color: SkyBlue;
+}
+.jedi .filler {
+  color: SkyBlue;
 }

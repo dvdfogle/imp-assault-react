@@ -1,7 +1,7 @@
 export default function Monitor(props) {
   return (
-    <div className="monitor {props.team}">
-      <div class="screen {props.team}">
+    <div className="monitor" style={props.style}>
+      <div className={"screen " + props.team}>
         {props.children}
       </div>
     </div>

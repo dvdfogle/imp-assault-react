@@ -1,15 +1,19 @@
-import Monitor, {Header} from "./components/Monitor";
-import CharDetails from "./components/CharDetails";
+import {useState} from "react";
+import axios from "axios";
 
-function App(props) {
-  const current_mission = "Aftermath";
+import {Route, NavLink, HashRouter} from "react-router-dom";
 
+import Home from "./pages/Home";
+import NewGame from "./pages/NewGame";
+import PlayGame from "./pages/PlayGame";
+
+function App({game}) {
   return (
-    <div className="App" id="terminal">
-      <Monitor team="rebel" style={{gridColumn:"1/2", gridRow:"1/2"}}>
-        <Header title="Active Assignment" subtitle={current_mission} />
-      </Monitor>
-    </div>
+    <HashRouter>
+      <Route exact path="/" component={Home} />
+      <Route path="/new_game" component={NewGame} />
+      <Route path="/play_game/:gameId" component={PlayGame} />
+    </HashRouter>
   );
 }
 

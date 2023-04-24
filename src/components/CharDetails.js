@@ -1,5 +1,6 @@
 export default function CharDetails(props) {
-  var currentHealth = props.maxHealth;
+  var hero = props.hero;
+  var currentHealth = hero.maxHealth;
   // const defenseDice = props.defense.map((color) => (
   //   <Die color="{color}" />
   // ));
@@ -8,13 +9,13 @@ export default function CharDetails(props) {
 
   if (props.summary) {
     return (
-      <li key="{props.id}"><a href="#" id="{props.id}">{props.name}</a></li>
+      <a href="#" id="{hero.id}">{hero.name}</a>
     );
   }
   return (
     <div className="char">
-      <p>{props.name}</p>
-      <img src="/images/tokens/{props.id}.png" class="circle" />
+      <p>{hero.name}</p>
+      <img src="/images/tokens/{hero.id}.png" class="circle" />
     </div>
   );
 }
